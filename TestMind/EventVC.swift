@@ -32,12 +32,25 @@ class EventVC: UITableViewController {
     var storeButton = ["A店家", "B店家", "C店家","A店家", "B店家", "C店家","A店家", "B店家", "C店家","A店家", "B店家", "C店家"]
     var headerSelect: IndexPath = IndexPath(item: 0, section: 0)
     var oriFrame = CGRect()
-    
+    var lastScrollOffset: CGFloat = -9999999.0
     override func viewDidLoad() {
         
         super.viewDidLoad()
         oriFrame = self.tableView.frame
         
+        let button = UIButton(type: .system)
+        button.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.height
+        button.clipsToBounds = true
+        button.layer.backgroundColor = UIColor(red: 0, green: 148/255, blue: 212/255, alpha: 1.0).cgColor
+        button.setTitle("地圖模式", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.addTarget(self, action: #selector(mapMode), for: .touchUpInside)
+        self.navigationController?.view.addSubview(button)
+    }
+    func mapMode() {
+        print("mapMode")
+        performSegue(withIdentifier: "toMap", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,28 +59,35 @@ class EventVC: UITableViewController {
     }
 
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-        if scrollView.contentOffset.y < 0 {
+//        print(scrollView.contentSize)
+//        print(contentCollectionView.contentSize)
+//        print(headerCollectionView.contentSize)
+        
+        if scrollView.contentSize == headerCollectionView.contentSize{
+            UpdateHeaderSelected()
             return
         }
-        if  scrollView.contentOffset.y > 70 {
-            // 最多讓畫面上移70, 要記得事先將contentCollectionView的高度增加70, 下面才不會留空
-            self.tableView.frame = CGRect(x: oriFrame.origin.x, y: oriFrame.origin.y - 70, width: oriFrame.width, height: oriFrame.height + 70)
-            return
+        
+        if scrollView.contentSize == contentCollectionView.contentSize{
+            var offset = scrollView.contentOffset.y
+            if scrollView.contentOffset.y < 0 {
+                offset = 0
+            }
+            if  scrollView.contentOffset.y > 70 {
+                // 最多讓畫面上移70, 要記得事先將contentCollectionView的高度增加70, 下面才不會留空
+                offset = 70
+            }
+            
+            if offset == lastScrollOffset{
+                return
+            }
+            else {
+                print(offset)
+                lastScrollOffset = offset
+                self.tableView.frame = CGRect(x: oriFrame.origin.x, y: oriFrame.origin.y - offset, width: oriFrame.width, height: oriFrame.height + offset)
+            }
         }
-//        let oriWidth = headerCollectionView.frame.width
-//        var newHeight = 117 - scrollView.contentOffset.y
-//        if newHeight < 30{
-//            
-//            newHeight = 30
-//        }
-//        headerCollectionView.frame = CGRect(x: 0, y: 0, width: oriWidth, height: newHeight)
-        
-
-        self.tableView.frame = CGRect(x: oriFrame.origin.x, y: oriFrame.origin.y - scrollView.contentOffset.y, width: oriFrame.width, height: oriFrame.height + scrollView.contentOffset.y)
-        
-        UpdateHeaderSelected()
-        
+   
     }
     
     func UpdateHeaderSelected()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L6C-nQ-eBG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EUL-fO-2Ze">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -225,10 +225,11 @@
                             <outlet property="delegate" destination="L6C-nQ-eBG" id="yhZ-36-s0Q"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="LUK-cs-eEO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36G-uh-t2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173.5999999999999" y="463.71814092953525"/>
+            <point key="canvasLocation" x="2112.8000000000002" y="463.71814092953525"/>
         </scene>
         <!--CodeVC-->
         <scene sceneID="Orq-E0-wFp">
@@ -471,11 +472,45 @@
                     <connections>
                         <outlet property="contentCollectionView" destination="y4D-u1-wWS" id="S2n-ML-251"/>
                         <outlet property="headerCollectionView" destination="0rw-3T-UJ6" id="Vsv-cn-eYx"/>
+                        <segue destination="psq-Cf-6BF" kind="show" identifier="toMap" id="MIt-4v-gXx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzd-Q6-Xwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="463.71814092953525"/>
+            <point key="canvasLocation" x="3799.1999999999998" y="463.71814092953525"/>
+        </scene>
+        <!--地圖模式-->
+        <scene sceneID="WnW-Ce-AZj">
+            <objects>
+                <viewController id="8aB-YQ-2WE" customClass="MapVC" customModule="TestMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OQk-Qh-Tmq"/>
+                        <viewControllerLayoutGuide type="bottom" id="j1Z-Lb-lXf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICn-QO-7RD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mtb-Pc-qVW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j1Z-Lb-lXf" firstAttribute="top" secondItem="Mtb-Pc-qVW" secondAttribute="bottom" id="VCc-3g-bZF"/>
+                            <constraint firstItem="Mtb-Pc-qVW" firstAttribute="top" secondItem="OQk-Qh-Tmq" secondAttribute="bottom" id="Zhl-xp-1Xv"/>
+                            <constraint firstAttribute="trailing" secondItem="Mtb-Pc-qVW" secondAttribute="trailing" id="kvi-MX-t31"/>
+                            <constraint firstItem="Mtb-Pc-qVW" firstAttribute="leading" secondItem="ICn-QO-7RD" secondAttribute="leading" id="wy9-Gq-hAJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="地圖模式" id="PqQ-32-dWn"/>
+                    <connections>
+                        <outlet property="mapview" destination="Mtb-Pc-qVW" id="tkr-Ej-MNk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdf-xP-g9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4736.8000000000002" y="1280.5097451274364"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="KhK-WC-fL9">
@@ -544,7 +579,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VAO-ID-1MU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2jq-Mh-dP8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2jq-Mh-dP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.28235294119999998" green="0.70588235290000001" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -556,7 +591,48 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiG-e5-w7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920.8" y="463.71814092953525"/>
+            <point key="canvasLocation" x="2860" y="463.71814092953525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KdZ-qc-WYm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EUL-fO-2Ze" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLg-cl-9yl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.28235294119999998" green="0.70588235290000001" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L6C-nQ-eBG" kind="relationship" relationship="rootViewController" id="j4a-Ps-Sdp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZk-aF-AWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.5999999999999" y="463.71814092953525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pb4-dx-e9Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="psq-Cf-6BF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lrl-sO-gxg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.28235294119999998" green="0.70588235290000001" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8aB-YQ-2WE" kind="relationship" relationship="rootViewController" id="109-GC-7dx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjp-3X-fMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3797.5999999999999" y="1280.5097451274364"/>
         </scene>
     </scenes>
     <resources>
