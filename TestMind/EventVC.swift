@@ -47,7 +47,7 @@ class EventVC: UITableViewController {
         performSegue(withIdentifier: "toMap", sender: self)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         modeButton.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
         modeButton.layer.cornerRadius = 0.5 * modeButton.bounds.size.height
@@ -64,7 +64,7 @@ class EventVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         for view in (self.navigationController?.view.subviews)! {
             if view == modeButton{
                 view.removeFromSuperview()

@@ -14,6 +14,7 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
+    @IBOutlet var scanfram: UIImageView!
     @IBOutlet var closeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         
         view.layer.addSublayer(previewLayer);
+        view.bringSubview(toFront: scanfram)
         view.bringSubview(toFront: closeBtn)
         
         captureSession.startRunning();
