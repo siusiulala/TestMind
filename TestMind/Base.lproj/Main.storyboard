@@ -473,11 +473,49 @@
                         <outlet property="contentCollectionView" destination="y4D-u1-wWS" id="S2n-ML-251"/>
                         <outlet property="headerCollectionView" destination="0rw-3T-UJ6" id="Vsv-cn-eYx"/>
                         <segue destination="psq-Cf-6BF" kind="show" identifier="toMap" id="MIt-4v-gXx"/>
+                        <segue destination="WLi-7D-Duq" kind="show" identifier="listToStore" id="JqA-w3-3q5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzd-Q6-Xwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3799.1999999999998" y="463.71814092953525"/>
+        </scene>
+        <!--StoreVC-->
+        <scene sceneID="bZz-MN-IXz">
+            <objects>
+                <tableViewController id="WLi-7D-Duq" customClass="StoreVC" customModule="TestMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ra2-OP-7uD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jYj-sn-dOI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jYj-sn-dOI" id="j5N-vP-FrI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFH-gy-uwV">
+                                            <rect key="frame" x="22" y="12" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WLi-7D-Duq" id="G1h-iZ-K1b"/>
+                            <outlet property="delegate" destination="WLi-7D-Duq" id="uGS-c9-mgD"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8Q-ve-HMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4862" y="449"/>
         </scene>
         <!--地圖模式-->
         <scene sceneID="WnW-Ce-AZj">
@@ -506,11 +544,12 @@
                     <navigationItem key="navigationItem" title="地圖模式" id="PqQ-32-dWn"/>
                     <connections>
                         <outlet property="mapview" destination="Mtb-Pc-qVW" id="tkr-Ej-MNk"/>
+                        <segue destination="WLi-7D-Duq" kind="show" identifier="mapToStore" id="F7m-Dp-Kn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdf-xP-g9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4736.8000000000002" y="1280.5097451274364"/>
+            <point key="canvasLocation" x="4759" y="1290"/>
         </scene>
         <!--Home Table View Controller-->
         <scene sceneID="KhK-WC-fL9">
@@ -638,4 +677,7 @@
     <resources>
         <image name="tri" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JqA-w3-3q5"/>
+    </inferredMetricsTieBreakers>
 </document>

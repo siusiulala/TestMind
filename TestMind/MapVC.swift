@@ -19,24 +19,18 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet var mapview: MKMapView!
     
     let locationManager = CLLocationManager()
-    var currentShop = ""
+    var currentStore = ""
     let tmp1 =
         CLLocationCoordinate2D(latitude: 24.768719231411371, longitude: 121.02813385651801)
     let tmp2 =
         CLLocationCoordinate2D(latitude: 24.761719231411371, longitude: 121.02113385651801)
+    let modeButton = UIButton(type: .system)
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.height
-        button.clipsToBounds = true
-        button.layer.backgroundColor = UIColor(red: 0, green: 148/255, blue: 212/255, alpha: 1.0).cgColor
-        button.setTitle("列表模式", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.addTarget(self, action: #selector(listMode), for: .touchUpInside)
-        self.navigationController?.view.addSubview(button)
+        
+        
         
         
         // add Privace - location when in use
@@ -73,6 +67,17 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         mapview.addAnnotation(pointAnnotation2)
         mapview.selectAnnotation(pointAnnotation, animated: true)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        modeButton.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
+        modeButton.layer.cornerRadius = 0.5 * modeButton.bounds.size.height
+        modeButton.clipsToBounds = true
+        modeButton.layer.backgroundColor = UIColor(red: 0, green: 148/255, blue: 212/255, alpha: 1.0).cgColor
+        modeButton.setTitle("列表模式", for: .normal)
+        modeButton.setTitleColor(UIColor.white, for: .normal)
+        modeButton.addTarget(self, action: #selector(listMode), for: .touchUpInside)
+        self.navigationController?.view.addSubview(modeButton)
+    }
     func listMode() {
         print("listMode")
         
@@ -81,6 +86,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        for view in (self.navigationController?.view.subviews)! {
+            if view == modeButton{
+                view.removeFromSuperview()
+            }
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -126,13 +139,20 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        currentShop = ((view.annotation?.title)!
+        currentStore = ((view.annotation?.title)!
             )!
 //        print(view.centerOffset)
     }
     
     func callOutButtonPress(_ sender : UIButton){
-        print(currentShop)
+        performSegue(withIdentifier: "mapToStore", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapToStore"
+        {
+            (segue.destination as! StoreVC).storeName = currentStore
+        }
     }
 
 }

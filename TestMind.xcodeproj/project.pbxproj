@@ -12,6 +12,7 @@
 		AF00AA891F2F1395002D53E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA871F2F1395002D53E9 /* Main.storyboard */; };
 		AF00AA8B1F2F1395002D53E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */; };
 		AF00AA8E1F2F1395002D53E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA8C1F2F1395002D53E9 /* LaunchScreen.storyboard */; };
+		AF300ED81F31AD3D00142763 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF300ED71F31AD3D00142763 /* StoreVC.swift */; };
 		AF9700751F316A1D00DACE94 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9700741F316A1D00DACE94 /* MapVC.swift */; };
 		AFDDFB3D1F2F1DA300386464 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */; };
 		AFDDFB411F2F2A9900386464 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB401F2F2A9900386464 /* CategoryCell.swift */; };
@@ -32,6 +33,7 @@
 		AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF00AA8D1F2F1395002D53E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF00AA8F1F2F1395002D53E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF300ED71F31AD3D00142763 /* StoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		AF9700741F316A1D00DACE94 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		AFDDFB401F2F2A9900386464 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AFDDFB461F2F336F00386464 /* CollectionViewController.swift */,
 				AFEB918C1F305806001C042C /* QRCodeVC.swift */,
 				AF9700741F316A1D00DACE94 /* MapVC.swift */,
+				AF300ED71F31AD3D00142763 /* StoreVC.swift */,
 				AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */,
 				AF00AA8C1F2F1395002D53E9 /* LaunchScreen.storyboard */,
 				AF00AA8F1F2F1395002D53E9 /* Info.plist */,
@@ -237,6 +240,7 @@
 				AFDDFB3D1F2F1DA300386464 /* HomeTableViewController.swift in Sources */,
 				AF00AA861F2F1395002D53E9 /* ViewController.swift in Sources */,
 				AFEB918B1F3012A3001C042C /* EventVC.swift in Sources */,
+				AF300ED81F31AD3D00142763 /* StoreVC.swift in Sources */,
 				AF00AA841F2F1395002D53E9 /* AppDelegate.swift in Sources */,
 				AFDDFB471F2F336F00386464 /* CollectionViewController.swift in Sources */,
 				AFDDFB431F2F31A300386464 /* StaticTableViewController.swift in Sources */,

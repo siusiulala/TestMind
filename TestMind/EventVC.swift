@@ -28,29 +28,35 @@ class EventVC: UITableViewController {
 
     @IBOutlet var contentCollectionView: UICollectionView!
     @IBOutlet var headerCollectionView: UICollectionView!
+    let modeButton = UIButton(type: .system)
     var headerButton = ["限時活動", "族群挑戰", "全期活動", "長官驗收"]
     var storeButton = ["A店家", "B店家", "C店家","A店家", "B店家", "C店家","A店家", "B店家", "C店家","A店家", "B店家", "C店家"]
     var headerSelect: IndexPath = IndexPath(item: 0, section: 0)
     var oriFrame = CGRect()
     var lastScrollOffset: CGFloat = -9999999.0
+    var currentStore = ""
     override func viewDidLoad() {
         
         super.viewDidLoad()
         oriFrame = self.tableView.frame
         
-        let button = UIButton(type: .system)
-        button.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.height
-        button.clipsToBounds = true
-        button.layer.backgroundColor = UIColor(red: 0, green: 148/255, blue: 212/255, alpha: 1.0).cgColor
-        button.setTitle("地圖模式", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.addTarget(self, action: #selector(mapMode), for: .touchUpInside)
-        self.navigationController?.view.addSubview(button)
+        
     }
     func mapMode() {
         print("mapMode")
         performSegue(withIdentifier: "toMap", sender: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        modeButton.frame = CGRect(x: UIScreen.main.bounds.width/2-75, y: UIScreen.main.bounds.height-70, width: 150, height: 50)
+        modeButton.layer.cornerRadius = 0.5 * modeButton.bounds.size.height
+        modeButton.clipsToBounds = true
+        modeButton.layer.backgroundColor = UIColor(red: 0, green: 148/255, blue: 212/255, alpha: 1.0).cgColor
+        modeButton.setTitle("地圖模式", for: .normal)
+        modeButton.setTitleColor(UIColor.white, for: .normal)
+        modeButton.addTarget(self, action: #selector(mapMode), for: .touchUpInside)
+        self.navigationController?.view.addSubview(modeButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +64,14 @@ class EventVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        for view in (self.navigationController?.view.subviews)! {
+            if view == modeButton{
+                view.removeFromSuperview()
+            }
+        }
+    }
+    
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        print(scrollView.contentSize)
 //        print(contentCollectionView.contentSize)
@@ -108,7 +122,12 @@ class EventVC: UITableViewController {
 //        self.tableView.reloadData()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listToStore"
+        {
+            (segue.destination as! StoreVC).storeName = currentStore
+        }
+    }
     
     
 }
@@ -159,6 +178,10 @@ extension EventVC : UICollectionViewDataSource{
 //            }
         } else {
             
+            if let cell = collectionView.cellForItem(at: indexPath) as? cCell{
+                currentStore = cell.storeLabel.text!
+                performSegue(withIdentifier: "listToStore", sender: self)
+            }
         }
         
     }
