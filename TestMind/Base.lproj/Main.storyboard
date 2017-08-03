@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EUL-fO-2Ze">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WLi-7D-Duq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -137,7 +137,7 @@
                                                             <rect key="frame" x="5" y="-0.5" width="111" height="90"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111" height="90"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="90"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RO-6P-rE8">
@@ -518,6 +518,17 @@
                                                         <segue destination="Ai9-BJ-iJ8" kind="presentation" id="ytv-vu-JqJ"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFD-dY-RLV">
+                                                    <rect key="frame" x="198" y="163" width="70" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Check In">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="beaconAction:" destination="WLi-7D-Duq" eventType="touchUpInside" id="YBC-Qs-3EK"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -533,6 +544,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8Q-ve-HMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4861.6000000000004" y="448.42578710644682"/>
+        </scene>
+        <!--BeaconVC-->
+        <scene sceneID="E8Q-To-udE">
+            <objects>
+                <viewController storyboardIdentifier="beacon" id="z4u-PP-EY8" customClass="BeaconVC" customModule="TestMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VZr-Rk-iLH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qbn-vx-h8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="APQ-hc-l99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcY-cm-5r3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜尋中..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWV-qp-VW2">
+                                <rect key="frame" x="62.5" y="233" width="250" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Yp9-V1-8D5"/>
+                                    <constraint firstAttribute="height" constant="200" id="xuc-Nu-Hxh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KcY-cm-5r3" firstAttribute="top" secondItem="APQ-hc-l99" secondAttribute="top" id="Ps1-py-5Ju"/>
+                            <constraint firstItem="iWV-qp-VW2" firstAttribute="centerY" secondItem="KcY-cm-5r3" secondAttribute="centerY" id="W6A-nh-5zA"/>
+                            <constraint firstItem="Qbn-vx-h8R" firstAttribute="top" secondItem="KcY-cm-5r3" secondAttribute="bottom" id="c6d-0J-MgD"/>
+                            <constraint firstItem="iWV-qp-VW2" firstAttribute="centerX" secondItem="KcY-cm-5r3" secondAttribute="centerX" id="fSs-Qh-Psg"/>
+                            <constraint firstAttribute="trailing" secondItem="KcY-cm-5r3" secondAttribute="trailing" id="o3P-LP-yXL"/>
+                            <constraint firstItem="KcY-cm-5r3" firstAttribute="leading" secondItem="APQ-hc-l99" secondAttribute="leading" id="x29-dc-kQ4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="msgBox" destination="iWV-qp-VW2" id="bVu-OG-hnw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eD8-Ce-8WH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5852" y="501.49925037481262"/>
         </scene>
         <!--地圖模式-->
         <scene sceneID="WnW-Ce-AZj">

@@ -14,6 +14,7 @@
 		AF00AA8E1F2F1395002D53E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA8C1F2F1395002D53E9 /* LaunchScreen.storyboard */; };
 		AF300ED81F31AD3D00142763 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF300ED71F31AD3D00142763 /* StoreVC.swift */; };
 		AF9700751F316A1D00DACE94 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9700741F316A1D00DACE94 /* MapVC.swift */; };
+		AFC6CA381F31CF940085DDAB /* BeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6CA371F31CF940085DDAB /* BeaconVC.swift */; };
 		AFDDFB3D1F2F1DA300386464 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */; };
 		AFDDFB411F2F2A9900386464 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB401F2F2A9900386464 /* CategoryCell.swift */; };
 		AFDDFB431F2F31A300386464 /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB421F2F31A300386464 /* StaticTableViewController.swift */; };
@@ -35,6 +36,7 @@
 		AF00AA8F1F2F1395002D53E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF300ED71F31AD3D00142763 /* StoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		AF9700741F316A1D00DACE94 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		AFC6CA371F31CF940085DDAB /* BeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconVC.swift; sourceTree = "<group>"; };
 		AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		AFDDFB401F2F2A9900386464 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		AFDDFB421F2F31A300386464 /* StaticTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				AFEB918A1F3012A3001C042C /* EventVC.swift */,
 				AFDDFB461F2F336F00386464 /* CollectionViewController.swift */,
 				AFEB918C1F305806001C042C /* QRCodeVC.swift */,
+				AFC6CA371F31CF940085DDAB /* BeaconVC.swift */,
 				AF9700741F316A1D00DACE94 /* MapVC.swift */,
 				AF300ED71F31AD3D00142763 /* StoreVC.swift */,
 				AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */,
@@ -245,6 +248,7 @@
 				AFDDFB471F2F336F00386464 /* CollectionViewController.swift in Sources */,
 				AFDDFB431F2F31A300386464 /* StaticTableViewController.swift in Sources */,
 				AF9700751F316A1D00DACE94 /* MapVC.swift in Sources */,
+				AFC6CA381F31CF940085DDAB /* BeaconVC.swift in Sources */,
 				AFDDFB411F2F2A9900386464 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

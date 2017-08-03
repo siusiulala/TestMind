@@ -6,6 +6,8 @@
 	<string>ssdsd</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>always</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
