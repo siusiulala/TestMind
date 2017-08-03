@@ -13,6 +13,7 @@
 		AF00AA8B1F2F1395002D53E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */; };
 		AF00AA8E1F2F1395002D53E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF00AA8C1F2F1395002D53E9 /* LaunchScreen.storyboard */; };
 		AF300ED81F31AD3D00142763 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF300ED71F31AD3D00142763 /* StoreVC.swift */; };
+		AF5962E91F32D40A0086F3F8 /* VocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5962E81F32D40A0086F3F8 /* VocVC.swift */; };
 		AF9700751F316A1D00DACE94 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9700741F316A1D00DACE94 /* MapVC.swift */; };
 		AFC6CA381F31CF940085DDAB /* BeaconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC6CA371F31CF940085DDAB /* BeaconVC.swift */; };
 		AFDDFB3D1F2F1DA300386464 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */; };
@@ -21,6 +22,16 @@
 		AFDDFB471F2F336F00386464 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDFB461F2F336F00386464 /* CollectionViewController.swift */; };
 		AFEB918B1F3012A3001C042C /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB918A1F3012A3001C042C /* EventVC.swift */; };
 		AFEB918D1F305806001C042C /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB918C1F305806001C042C /* QRCodeVC.swift */; };
+		AFF5DE671F32C10000872DAC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE661F32C10000872DAC /* libc++.tbd */; };
+		AFF5DE691F32C12400872DAC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE681F32C12400872DAC /* Accelerate.framework */; };
+		AFF5DE6B1F32C12D00872DAC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE6A1F32C12D00872DAC /* AudioToolbox.framework */; };
+		AFF5DE6D1F32C13600872DAC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE6C1F32C13600872DAC /* AVFoundation.framework */; };
+		AFF5DE6F1F32C14100872DAC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE6E1F32C14100872DAC /* CoreLocation.framework */; };
+		AFF5DE711F32C14B00872DAC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE701F32C14B00872DAC /* AdSupport.framework */; };
+		AFF5DE731F32C15200872DAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE721F32C15200872DAC /* UIKit.framework */; };
+		AFF5DE751F32C15E00872DAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE741F32C15E00872DAC /* Foundation.framework */; };
+		AFF5DE801F32C84A00872DAC /* libTctVoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5DE7E1F32C84A00872DAC /* libTctVoc.a */; };
+		AFF5DE811F32C84A00872DAC /* VOC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFF5DE7F1F32C84A00872DAC /* VOC.bundle */; };
 		B32FF962ADC12061C3F2ED9E /* Pods_TestMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E54259A0BE786F4465D9007 /* Pods_TestMind.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +46,7 @@
 		AF00AA8D1F2F1395002D53E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF00AA8F1F2F1395002D53E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF300ED71F31AD3D00142763 /* StoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
+		AF5962E81F32D40A0086F3F8 /* VocVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocVC.swift; sourceTree = "<group>"; };
 		AF9700741F316A1D00DACE94 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		AFC6CA371F31CF940085DDAB /* BeaconVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconVC.swift; sourceTree = "<group>"; };
 		AFDDFB3C1F2F1DA300386464 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +55,17 @@
 		AFDDFB461F2F336F00386464 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AFEB918A1F3012A3001C042C /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		AFEB918C1F305806001C042C /* QRCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		AFF5DE661F32C10000872DAC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AFF5DE681F32C12400872DAC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AFF5DE6A1F32C12D00872DAC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AFF5DE6C1F32C13600872DAC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AFF5DE6E1F32C14100872DAC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AFF5DE701F32C14B00872DAC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		AFF5DE721F32C15200872DAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFF5DE741F32C15E00872DAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AFF5DE7D1F32C56800872DAC /* VOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VOC.h; sourceTree = "<group>"; };
+		AFF5DE7E1F32C84A00872DAC /* libTctVoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTctVoc.a; sourceTree = "<group>"; };
+		AFF5DE7F1F32C84A00872DAC /* VOC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VOC.bundle; sourceTree = "<group>"; };
 		DFDEFE50338E991A0CC34C3E /* Pods-TestMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMind.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestMind/Pods-TestMind.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +74,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF5DE751F32C15E00872DAC /* Foundation.framework in Frameworks */,
+				AFF5DE731F32C15200872DAC /* UIKit.framework in Frameworks */,
+				AFF5DE711F32C14B00872DAC /* AdSupport.framework in Frameworks */,
+				AFF5DE6F1F32C14100872DAC /* CoreLocation.framework in Frameworks */,
+				AFF5DE6D1F32C13600872DAC /* AVFoundation.framework in Frameworks */,
+				AFF5DE6B1F32C12D00872DAC /* AudioToolbox.framework in Frameworks */,
+				AFF5DE691F32C12400872DAC /* Accelerate.framework in Frameworks */,
+				AFF5DE671F32C10000872DAC /* libc++.tbd in Frameworks */,
+				AFF5DE801F32C84A00872DAC /* libTctVoc.a in Frameworks */,
 				B32FF962ADC12061C3F2ED9E /* Pods_TestMind.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +93,14 @@
 		186D4B7CE67C47F0D47562A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF5DE741F32C15E00872DAC /* Foundation.framework */,
+				AFF5DE721F32C15200872DAC /* UIKit.framework */,
+				AFF5DE701F32C14B00872DAC /* AdSupport.framework */,
+				AFF5DE6E1F32C14100872DAC /* CoreLocation.framework */,
+				AFF5DE6C1F32C13600872DAC /* AVFoundation.framework */,
+				AFF5DE6A1F32C12D00872DAC /* AudioToolbox.framework */,
+				AFF5DE681F32C12400872DAC /* Accelerate.framework */,
+				AFF5DE661F32C10000872DAC /* libc++.tbd */,
 				1E54259A0BE786F4465D9007 /* Pods_TestMind.framework */,
 			);
 			name = Frameworks;
@@ -96,6 +136,8 @@
 		AF00AA821F2F1395002D53E9 /* TestMind */ = {
 			isa = PBXGroup;
 			children = (
+				AFF5DE7E1F32C84A00872DAC /* libTctVoc.a */,
+				AFF5DE7F1F32C84A00872DAC /* VOC.bundle */,
 				AF00AA831F2F1395002D53E9 /* AppDelegate.swift */,
 				AF00AA851F2F1395002D53E9 /* ViewController.swift */,
 				AF00AA871F2F1395002D53E9 /* Main.storyboard */,
@@ -106,11 +148,13 @@
 				AFDDFB461F2F336F00386464 /* CollectionViewController.swift */,
 				AFEB918C1F305806001C042C /* QRCodeVC.swift */,
 				AFC6CA371F31CF940085DDAB /* BeaconVC.swift */,
+				AF5962E81F32D40A0086F3F8 /* VocVC.swift */,
 				AF9700741F316A1D00DACE94 /* MapVC.swift */,
 				AF300ED71F31AD3D00142763 /* StoreVC.swift */,
 				AF00AA8A1F2F1395002D53E9 /* Assets.xcassets */,
 				AF00AA8C1F2F1395002D53E9 /* LaunchScreen.storyboard */,
 				AF00AA8F1F2F1395002D53E9 /* Info.plist */,
+				AFF5DE7D1F32C56800872DAC /* VOC.h */,
 			);
 			path = TestMind;
 			sourceTree = "<group>";
@@ -150,7 +194,7 @@
 				TargetAttributes = {
 					AF00AA7F1F2F1394002D53E9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = M6YNSGHTE9;
+						DevelopmentTeam = E43FDQ8J74;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -180,6 +224,7 @@
 			files = (
 				AF00AA8E1F2F1395002D53E9 /* LaunchScreen.storyboard in Resources */,
 				AF00AA8B1F2F1395002D53E9 /* Assets.xcassets in Resources */,
+				AFF5DE811F32C84A00872DAC /* VOC.bundle in Resources */,
 				AF00AA891F2F1395002D53E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +295,7 @@
 				AF9700751F316A1D00DACE94 /* MapVC.swift in Sources */,
 				AFC6CA381F31CF940085DDAB /* BeaconVC.swift in Sources */,
 				AFDDFB411F2F2A9900386464 /* CategoryCell.swift in Sources */,
+				AF5962E91F32D40A0086F3F8 /* VocVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,11 +421,17 @@
 			baseConfigurationReference = 694DD2462DEF414E38BACFC0 /* Pods-TestMind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M6YNSGHTE9;
+				DEVELOPMENT_TEAM = E43FDQ8J74;
 				INFOPLIST_FILE = TestMind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = siusiulala.TestMind;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TestMind",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gov.wda.dhsc.mindpoint.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./TestMind/VOC.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -389,11 +441,17 @@
 			baseConfigurationReference = DFDEFE50338E991A0CC34C3E /* Pods-TestMind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M6YNSGHTE9;
+				DEVELOPMENT_TEAM = E43FDQ8J74;
 				INFOPLIST_FILE = TestMind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = siusiulala.TestMind;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TestMind",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gov.wda.dhsc.mindpoint.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./TestMind/VOC.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

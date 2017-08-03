@@ -19,6 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        //VOC
+        let voc = VOC.initSDK(withSN: "a4e8c498a94b5d310cc5f4afa1ab4340")
+        
+
+        
+        voc?.checkPremission({ (success) in
+            print("checkVocPremission \(success)")
+            if !success {
+                let alert = UIAlertController(title: "提示", message: "提醒您，停用權限XXXXXX", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "確定", style: UIAlertActionStyle.default, handler: nil))
+                
+            }
+        }, showAlert: false)
+        
+        //
+        
         return true
     }
 
